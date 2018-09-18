@@ -116,7 +116,7 @@ Finally, properties are what give the selected elements of a rule declaration th
 // ListingCard.jsx
 function ListingCard() {
   return (
-    <article class="ListingCard featured">
+    <article class="listing-card featured">
 
       <h1 class="title">Adorable 2BR in the sunny Mission</h1>
 
@@ -131,15 +131,15 @@ function ListingCard() {
 
 ```css
 /* ListingCard.css */
-.ListingCard { }
-.ListingCard[class*='featured'] { }
-.ListingCard .title { }
-.ListingCard .content { }
+.listing-card { }
+.listing-card[class*='featured'] { }
+.listing-card .title { }
+.listing-card .content { }
 ```
 
-  * `.ListingCard` is the “block” and represents the higher-level component
-  * `.ListingCard .title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  * `.ListingCard[class*='featured']` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  * `.listing-card` is the “block” and represents the higher-level component
+  * `.listing-card .title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
+  * `.listing-card[class*='featured']` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
