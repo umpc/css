@@ -1,7 +1,5 @@
 # CSS Styleguide
 
-*A mostly reasonable approach to CSS*
-
 ## Table of Contents
 
 1. [Terminology](#terminology)
@@ -11,7 +9,6 @@
 1. [CSS](#css)
     - [Formatting](#formatting)
     - [Comments](#comments)
-    - [OOCSS and BEM](#oocss-and-bem)
     - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)
     - [Border](#border)
@@ -132,14 +129,14 @@ function ListingCard() {
 ```css
 /* ListingCard.css */
 .listing-card { }
-.listing-card[class*='featured'] { }
+.listing-card.featured { }
 .listing-card .title { }
 .listing-card .content { }
 ```
 
   * `.listing-card` is the “block” and represents the higher-level component
   * `.listing-card .title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
-  * `.listing-card[class*='featured']` is a “modifier” and represents a different state or variation on the `.listing-card` block.
+  * `.listing-card.featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
