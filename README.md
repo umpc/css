@@ -9,6 +9,7 @@
 1. [CSS](#css)
     - [Formatting](#formatting)
     - [Comments](#comments)
+    - [Naming Convention](#naming-convention)
     - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)
     - [Border](#border)
@@ -105,7 +106,7 @@ Finally, properties are what give the selected elements of a rule declaration th
   - Uses of z-index
   - Compatibility or browser-specific hacks
 
-### Syntax
+### Naming Convention
 
 **Example**
 
