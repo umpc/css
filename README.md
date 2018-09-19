@@ -60,14 +60,15 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ### Formatting
 
-* Use soft tabs (2 spaces) for indentation
+* Use soft tabs (2 spaces) for indentation.
 * Prefer dashes over camelCasing in class names.
-* Do not use ID selectors
+* Do not use ID selectors.
+* Do not use underscores, except to override an existing or external style.
 * When using multiple selectors in a rule declaration, give each selector its own line.
-* Put a space before the opening brace `{` in rule declarations
+* Put a space before the opening brace `{` in rule declarations.
 * In properties, put a space after, but not before, the `:` character.
-* Put closing braces `}` of rule declarations on a new line
-* Put blank lines between rule declarations
+* Put closing braces `}` of rule declarations on a new line.
+* Put blank lines between rule declarations.
 
 **Bad**
 
@@ -108,27 +109,20 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ### Naming Convention
 
+The naming convention is a simplified version of [BEM](http://getbem.com/naming/).
+
 **Example**
 
-```jsx
-// ListingCard.jsx
-function ListingCard() {
-  return (
-    <article class="listing-card featured">
-
-      <h1 class="title">Adorable 2BR in the sunny Mission</h1>
-
-      <div class="content">
-        <p>Vestibulum id ligula porta felis euismod semper.</p>
-      </div>
-
-    </article>
-  );
-}
+```html
+<article class="listing-card featured">
+  <h1 class="title">Adorable 2BR in the sunny Mission</h1>
+  <div class="content">
+    <p>Vestibulum id ligula porta felis euismod semper.</p>
+  </div>
+</article>
 ```
 
 ```css
-/* ListingCard.css */
 .listing-card { }
 .listing-card.featured { }
 .listing-card .title { }
@@ -138,6 +132,24 @@ function ListingCard() {
   * `.listing-card` is the “block” and represents the higher-level component
   * `.listing-card .title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
   * `.listing-card.featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
+
+HTML tag names may be used instead of a class name to represent BEM-like elements.
+
+**Example**
+
+```html
+<article class="listing-card featured">
+  <h1>Adorable 2BR in the sunny Mission</h1>
+  <p>Vestibulum id ligula porta felis euismod semper.</p>
+</article>
+```
+
+```css
+.listing-card { }
+.listing-card.featured { }
+.listing-card h1 { }
+.listing-card p { }
+```
 
 ### ID selectors
 
